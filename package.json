@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CodeLyoko2610/reduxBasics/issues"
   },
-  "homepage": "https://github.com/CodeLyoko2610/reduxBasics#readme"
+  "homepage": "https://github.com/CodeLyoko2610/reduxBasics#readme",
+  "dependencies": {
+    "expect": "^25.1.0"
+  }
 }
