@@ -1,11 +1,19 @@
 {
   "name": "reduxbasics",
   "version": "1.0.0",
-  "description": "First attempt to learn Redux",
+  "description": "First attempt to learn Redux. Based on Dan Abramov's course on egghead.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dang Chuong Pham",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLyoko2610/reduxBasics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeLyoko2610/reduxBasics/issues"
+  },
+  "homepage": "https://github.com/CodeLyoko2610/reduxBasics#readme"
 }
