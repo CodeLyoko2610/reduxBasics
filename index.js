@@ -1,16 +1,16 @@
 const expect = require('expect');
 
-function counter(state, action) {
-  if (typeof state === 'undefined') {
-    return 0;
+//With default state set to 0
+const counter = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    case 'DECREMENT':
+      return state - 1;
+    default:
+      return state;
   }
-  if (action.type === 'INCREMENT') {
-    return state + 1;
-  } else if (action.type === 'DECREMENT') {
-    return state - 1;
-  }
-  return state;
-}
+};
 
 expect(
   counter(0, {
@@ -44,10 +44,6 @@ expect(
 ).toEqual(1);
 
 //Convention in Redux: If the received argument straight as type undefined, must return the intial state
-expect(
-  counter(undefined, {
-    type: 'INCREMENT'
-  })
-).toEqual(0);
+expect(counter(undefined, {})).toEqual(0);
 
 console.log('Tests passed!');
