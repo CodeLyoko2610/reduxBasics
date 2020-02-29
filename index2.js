@@ -11,14 +11,22 @@ const counter = (state = 0, action) => {
 };
 
 //Create Store
-//const { createStore } = Redux;
-const { createStore } = require('redux');
+const { createStore } = Redux; //Require redux-function via browser
+//const { createStore } = require('redux'); //Require redux-function when run in Node environment
 const store = createStore(counter);
 
-//1: getState method of the store
-console.log(store.getState());
+const render = () => {
+  //1: getState method of the store
+  let currentState = store.getState();
+  document.body.innerText = currentState;
+};
 
-//2: dispatch method of the store
-let increAction = { type: 'INCREMENT' };
-store.dispatch(increAction);
-console.log(store.getState());
+//3: subscribe method of the store
+//callback to be executed whenever an action is dispatched
+store.subscribe(render);
+render(); //calling render the first time to render the initial state 0
+
+document.addEventListener('click', () => {
+  //2: dispatch method of the store
+  store.dispatch({ type: 'INCREMENT' });
+});
