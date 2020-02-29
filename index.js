@@ -1,5 +1,6 @@
 const expect = require('expect');
 
+//Reducer counter
 //With default state set to 0
 const counter = (state = 0, action) => {
   switch (action.type) {
@@ -38,10 +39,10 @@ expect(
 
 //Unknown action
 expect(
-  counter(1, {
+  counter(100, {
     type: 'SOMETHING_ELSE'
   })
-).toEqual(1);
+).toEqual(100);
 
 //Convention in Redux: If the received argument straight as type undefined, must return the intial state
 expect(counter(undefined, {})).toEqual(0);

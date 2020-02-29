@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CodeLyoko2610/reduxBasics#readme",
   "dependencies": {
-    "expect": "^25.1.0"
+    "expect": "^25.1.0",
+    "redux": "^4.0.5"
   }
 }
